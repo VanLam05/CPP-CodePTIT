@@ -1,3 +1,6 @@
+// VanLam 
+// https://www.facebook.com/van.lam.205/
+// ITPTIT Club
 #include <bits/stdc++.h>
 using namespace std;
 vector<vector<char>> a(1000, vector<char>(1000));
