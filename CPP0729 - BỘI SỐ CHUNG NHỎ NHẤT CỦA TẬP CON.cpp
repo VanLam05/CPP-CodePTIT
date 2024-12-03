@@ -1,4 +1,6 @@
-// Created by Nguyễn Mạnh Quân
+// VanLam 
+// https://www.facebook.com/van.lam.205/
+// ITPTIT Club
 #include<bits/stdc++.h>
 using namespace std;
 #define mp make_pair
