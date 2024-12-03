@@ -10,6 +10,7 @@ using namespace std;
 #define pii pair<int, int>
 #define vb vector<bool>
 #define pib pair<int, bool>
+
 const int INF = 1e9 + 7;
 void solve()
 {
