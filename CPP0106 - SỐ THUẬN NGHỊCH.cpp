@@ -1,3 +1,6 @@
+// VanLam 
+// https://www.facebook.com/van.lam.205/
+// ITPTIT Club
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -27,6 +30,7 @@ using namespace std;
 const int INF = 1e9 + 7;
 const int MOD = 1e9 + 7;
 const int maxN = 1e6 + 5;
+
 void solve()
 {
     string s;
@@ -41,6 +45,7 @@ void solve()
     }
     yes
 }
+
 signed main()
 {
     ios::sync_with_stdio(0);
