@@ -1,76 +1,80 @@
-#include <bits/stdc++.h>
+// VanLam 
+// https://www.facebook.com/van.lam.205/
+// ITPTIT Club
+#include<bits/stdc++.h>
 using namespace std;
+
+#define ll long long
 #define fi first
 #define se second
-#define pb push_back
-#define ll long long
-#define sz size()
-#define FOR(i,a,b) for(long long i = a; i < b; i++)
-#define FORD(i,a,b) for(long long i = a; i > b; i--)
-#define faster() ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);
 #define vi vector<int>
-#define vll vector<long long>
-#define endl '\n'
-#define MOD 1000000007
-// #define task "Fernandez"
-#ifdef FERNANDEZ
-   #include "debug.h"
-#else
-   #define debug(...) 04
-#endif
-vi f, prime(10000005,0);
-const int N=1e7+5;
-void sinh()
-{
-    for(int i=2;i * i< N;i++)
-    {
-        if(prime[i]==0)
-        {
-            for(int j=i*i;j<N;j+=i)
-            {
-                prime[j]=1;
+#define vl vector<ll>
+#define vb vector<bool>
+#define vs vector<string>
+#define pii pair<int, int>
+#define pib pair<int, bool>
+#define pdd pair<double, double>
+#define mii map<int, int>
+#define mib map<int, bool>
+#define mil map<int, ll>
+#define mli map<ll, int>
+#define si set<int>
+#define vvi vector<vi>
+#define vvl vector<vl>
+#define vvb vector<vb>
+#define vpi vector<pii>
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define fin(a) for(auto &x : (a)) cin >> x
+#define fout(a) for(auto x : (a)) cout << x << ' '
+#define yes cout << "YES\n";
+#define no cout << "NO\n";
+#define yn yes else no
+#define ny no else yes
+
+const int INF = 1e9 + 7;
+const int MOD = 1e9 + 7;
+const int maxN = 1e7 + 5;
+
+vi prime;
+
+void solve()
+{   
+    ll n;
+    cin >> n;
+    for (int i=0; i<prime.size() && (ll) prime[i] * prime[i] <= n; i++) {
+        if (n % prime[i] == 0) {
+            int cnt = 0;
+            while(n % prime[i] == 0) {
+                n /= (ll) prime[i];
+                cnt++;
             }
+            cout << prime[i] << ' ' << cnt << '\n';
         }
     }
-    for (int i=2; i<N; i++)
-    {
-        if (prime[i] == 0)
-        {
-            f.pb(i);
-        }
-    }
+
+    if (n > 1) cout << n << ' ' << 1 << '\n';
+    cout << '\n';
 }
+
 signed main()
 {
-    faster();
-    // if(fopen(task".INP", "r"))
-    // {
-    //     freopen(task".OUT", "r", stdin);
-    //     freopen(task".OUT", "w", stdout);
-    // }
-    int t;
+    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    int t = 1;
     cin >> t;
-    sinh();
+    vb isPrime(maxN, true);
+    isPrime[0] = isPrime[1] = false;
+    for (int i=2; i*i<maxN; i++) 
+        if (isPrime[i])
+            for (int j=i*i; j<maxN; j+=i)
+                isPrime[j] = false;
+
+    for (int i=2; i<maxN; i++)
+        if (isPrime[i]) prime.push_back(i);
+
     while(t--)
     {
-        ll n;
-        cin>>n;
-        int fsize=f.sz;
-        for(int i=0;i< fsize && (long long)f[i] * f[i] <= n;i++)
-        {
-            if(n%f[i]==0) 
-            {
-                int mx=0;
-                while(n%f[i]==0)
-                {
-                    n/=f[i];
-                    mx++;
-                }
-                cout<<f[i]<<" "<<mx<<endl;
-            }
-        }
-        if(n>1) cout<<n<<" "<<1<<endl;
-        cout<<endl;
+        solve();
     }
     return 0;
 }
