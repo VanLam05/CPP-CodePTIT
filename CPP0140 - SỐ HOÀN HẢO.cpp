@@ -1,3 +1,6 @@
+// VanLam 
+// https://www.facebook.com/van.lam.205/
+// ITPTIT Club
 #include <bits/stdc++.h>
 using namespace std;
 vector<long long> a = {6, 28, 496, 8128, 33550336, 8589869056, 137438691328};
