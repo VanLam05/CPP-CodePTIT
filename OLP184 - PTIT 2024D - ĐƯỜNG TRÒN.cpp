@@ -1,3 +1,6 @@
+// VanLam 
+// https://www.facebook.com/van.lam.205/
+// ITPTIT Club
 #include <cmath>
 #include <iostream>
 const long double epsilon = 1e-9;
