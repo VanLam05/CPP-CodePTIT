@@ -3,6 +3,7 @@
 // ITPTIT Club
 #include <bits/stdc++.h>
 using namespace std;
+
 void solve()
 {
     int n, m;
@@ -47,6 +48,7 @@ void solve()
     }
     cout << endl;
 }
+
 int main()
 {
     int t;
