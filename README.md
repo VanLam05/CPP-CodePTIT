@@ -1,2 +1,0 @@
-# CPP-CodePTIT
-# CPP-CodePTIT
