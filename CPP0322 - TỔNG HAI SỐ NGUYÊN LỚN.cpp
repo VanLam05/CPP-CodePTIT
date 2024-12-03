@@ -1,3 +1,6 @@
+// VanLam 
+// https://www.facebook.com/van.lam.205/
+// ITPTIT Club
 #include <bits/stdc++.h>
 using namespace std;
 string addStrings(string num1, string num2)
