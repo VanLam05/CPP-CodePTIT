@@ -3,6 +3,7 @@
 // ITPTIT Club
 #include <bits/stdc++.h>
 using namespace std;
+
 string generate(string s)
 {
     map<char, int> m;
@@ -44,12 +45,14 @@ string generate(string s)
         tmp += res;
     return tmp;
 }
+
 void solve()
 {
     string s;
     cin >> s;
     cout << generate(s) << endl;
 }
+
 int main()
 {
     int t;
